@@ -1,14 +1,13 @@
-# Phase Response Curve Modeling – WINKLER_PRC_paper
+# Phase Response Curve Modeling
 
-Welcome!
+Hi!
 
 This repository contains the code to reproduce the figures in our publication:
 
 **Marius Winkler, Grégory Dumont, Eckehard Schoell, and Boris Gutkin (2021):**  
 *Phase response approaches to neural activity models with distributed delay*  
 Published in *Biological Cybernetics*, December 2021.  
-[👉 Read the paper](https://link.springer.com/article/10.1007/s00422-021-00910-9)  
-📄 DOI: [10.1007/s00422-021-00910-9](https://doi.org/10.1007/s00422-021-00910-9)
+DOI: [10.1007/s00422-021-00910-9](https://doi.org/10.1007/s00422-021-00910-9)
 
 ---
 
@@ -54,8 +53,8 @@ This script allows for flexible configuration, including cluster submission via 
 #### Usage
 
 ```bash
-./main.sh --figures=2,3 --mode=slurm --phase=compute [--debug]
-./main.sh --figures=2,3 --mode=local --phase=plotting [--debug]
+./main.sh --figures=2,3,4,5,6,7 --mode=slurm --phase=compute [--debug]
+./main.sh --figures=1,2,3,4,5,6,7 --mode=local --phase=plotting [--debug]
 ```
 
 #### 🛠 Options
@@ -70,6 +69,7 @@ This script allows for flexible configuration, including cluster submission via 
 
 #### Notes
 
+- Make sure to run `--phase=compute` first before you run `--phase=plotting`.
 - For **Figures 5–7**, a *sigma sweep* is performed, and each sigma value is handled in a separate job.
 - The sweep is executed only once, even if multiple figures (5–7) are selected at the same time.
 
