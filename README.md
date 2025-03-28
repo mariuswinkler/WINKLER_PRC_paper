@@ -82,8 +82,11 @@ This script allows for flexible configuration, including cluster submission via 
 ├── notebooks/              # Jupyter notebooks for each figure and model
 ├── scripts/
 │   └── main.sh             # Main script to run or schedule notebooks
-├── data/                   # (Ignored) Folder for input data, if applicable
-└── output/                 # (Ignored) Folder for generated outputs
+├── data/                   # (Ignored) Folder for output data. Will be generated.
+└── figures/                # Folder for generated figures
+└── configs/                # Folder for config files
+└── logs/                   # (Ignored) Folder for log files. Will be generated.
+
 ```
 
 ---
